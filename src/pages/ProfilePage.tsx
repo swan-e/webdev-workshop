@@ -1,6 +1,6 @@
 import '../App.css';
 import { Box, Typography, Stack } from '@mui/material';
-import placeholderImg from '../assets/placeholder.jpg';
+//import placeholderImg from '../assets/placeholder.jpg';
 
 export default function ProfilePage() {
   return (
@@ -44,10 +44,10 @@ export default function ProfilePage() {
          *    - make sure to change the src={} to have YOURIMAGE below
          * 
          */}
-        <Box width={'40%'}>
+        {/* <Box width={'40%'}>
           <Box
             component="img"
-            src={placeholderImg}
+            //src={placeholderImg}
             alt="Placeholder"
             sx={{
               borderRadius: '44px',
@@ -55,7 +55,7 @@ export default function ProfilePage() {
               height: 'auto',      
             }}
           />
-        </Box>
+        </Box> */}
       </Stack>
   );
 }
