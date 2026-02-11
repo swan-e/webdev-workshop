@@ -5,19 +5,28 @@ export default function ProjectCard({image, title, children, link}) {
     const theme = useTheme();
     return (
         <Card sx={{ width: 540, borderRadius: '20px', bgcolor: 'background.secondary' }}>
-            <CardMedia
-                sx={{ 
-                    minHeight: 280,
-                    marginTop: '8px',
-                    marginRight: '8px',
-                    marginLeft: '8px',
+            <Box
+                sx={{
+                    position: 'relative',
+                    width: '100%',
+                    height: 280,
                     borderRadius: '12px',
-                    backgroundImage: `linear-gradient(to bottom, rgba(255,255,255,0) 0%, ${theme.palette.background.secondary} 100%), url(${process.env.PUBLIC_URL}/${image})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center'
+                    overflow: 'hidden',
                 }}
-                title="project"
-            />
+            >
+                {/* Image */}
+                <img
+                    src={`/${image}`}
+                    alt={title}
+                    style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    display: 'block',
+                    }}
+                />
+            </Box>
+
             <CardContent>
                 <Typography variant="h5" fontWeight={'bold'} sx={{color: 'primary.main'}} >
                     {title}

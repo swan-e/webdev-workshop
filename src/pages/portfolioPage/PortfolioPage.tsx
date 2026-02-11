@@ -16,6 +16,29 @@ export default function PortfolioPage() {
                     
             ))}
         </Box>
+
+        <Box
+           sx={{
+            px: { xs: 2, sm: 4, md: 6 },  
+            pt: { xs: 3, sm: 4, md: 6 },
+            display: 'grid',
+            gridTemplateColumns: {
+              xs: '1fr',
+              sm: '1fr 1fr',
+              md: '1fr 1fr 1fr',
+            },
+          }}
+        >
+          {PersonalProjects.map((project, index) => (
+            <Box key={index}>
+              <img
+                src={process.env.PUBLIC_URL + project.image}
+                alt={project.name}
+                style={{ width: '100%', display: 'block' }}
+              />
+            </Box>
+          ))}
+        </Box>
     </>
   );
 }
