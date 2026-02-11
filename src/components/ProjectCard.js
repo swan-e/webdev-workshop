@@ -1,4 +1,4 @@
-import { Card, CardActions, CardContent, IconButton, Typography, useTheme } from '@mui/material';
+import { Box, Card, CardActions, CardContent, IconButton, Typography, useTheme } from '@mui/material';
 import LanguageIcon from '@mui/icons-material/Language';
 
 export default function ProjectCard({image, title, children, link}) {
