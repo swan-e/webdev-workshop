@@ -17,7 +17,7 @@ export default function PortfolioPage() {
             ))}
         </Box>
 
-        <Box
+        {/*<Box
            sx={{
             px: { xs: 2, sm: 4, md: 6 },  
             pt: { xs: 3, sm: 4, md: 6 },
@@ -39,6 +39,7 @@ export default function PortfolioPage() {
             </Box>
           ))}
         </Box>
+        */}
     </>
   );
 }
