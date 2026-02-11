@@ -10,6 +10,7 @@ export default function PortfolioPage() {
             {PersonalProjects.map((project, index) => (
                 <ProjectCard key={index} 
                     image={process.env.PUBLIC_URL + project.image}
+                    type={project.type}
                     title={project.name} 
                     children={project.description} 
                     link={project.link}/>

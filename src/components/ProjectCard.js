@@ -1,7 +1,7 @@
 import { Box, Card, CardActions, CardContent, IconButton, Typography, useTheme } from '@mui/material';
 import LanguageIcon from '@mui/icons-material/Language';
 
-export default function ProjectCard({image, title, children, link}) {
+export default function ProjectCard({image, title, type, children, link}) {
     const theme = useTheme();
     return (
         <Card sx={{ width: 540, borderRadius: '20px', bgcolor: 'background.secondary' }}>
@@ -30,6 +30,9 @@ export default function ProjectCard({image, title, children, link}) {
             <CardContent>
                 <Typography variant="h5" fontWeight={'bold'} sx={{color: 'primary.main'}} >
                     {title}
+                </Typography>
+                <Typography variant="h7" fontWeight={'bold'} sx={{color: 'primary.main'}} >
+                    {type}
                 </Typography>
                 <Typography variant="body2" sx={{ color: 'secondary.main' }}>
                     {children}
